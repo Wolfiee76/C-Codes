@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+float getSalary(float annualSalary)
+{
+    if (annualSalary < 40000) {
+        return 1.05 * annualSalary;
+    }
+    else {
+        return annualSalary + 2000 + (0.02 * (annualSalary - 40000));
+    }
+
+}
+
+
+int main()
+{
+    float annualSalary;
+    cout << "Please enter your annual salary in dollars: " << endl;
+    cin >> annualSalary;
+
+    float newSalary = getSalary(annualSalary);
+    cout << "new salary is " << newSalary << endl;
+
+    return 0;
+}
