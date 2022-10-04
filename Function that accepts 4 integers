@@ -1,0 +1,30 @@
+// write a function taht acepts 4 intger parameters and returns the largest of them as a result
+int large(int a, int b, int c, int d)
+{
+    int max = a;
+    if (b > max)
+    {
+        max = b;
+    }
+
+    if (c > max)
+    {
+        max = c;
+    }
+
+    if (d > max)
+    {
+        max = d;
+    }
+    return max;
+
+}
+
+
+int main()
+{
+    int a, b, c, d;
+    cout << "enter 4 numbers";
+    cin >> a >> b >> c >> d;
+    cout << "the largest num is" << endl;
+}
