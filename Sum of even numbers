@@ -1,0 +1,36 @@
+// write a func call sumEvenRange which acepts as parameters the start and end of a given range
+// and returns the sum of all even numbers
+ // write a program to ask the user for 2 numbers as ranges and display the sum computed WITH Function
+int sumEvenRange(int start, int end)
+{
+    int sum = 0;
+    for (int number = start; number <= end; number++)
+    {
+        cout << number << endl;
+        if (number % 2 == 0)
+        {
+            sum += number;
+        }
+    }
+    cout << "-----------------" << endl;
+    return sum;
+    
+ }
+
+
+int main()
+{
+    int a, b;
+    cout << "enter 2 numbers";
+        cin >> a >> b;
+
+        if (a >= b)
+        {
+            cout << "Invalid range"<< endl;
+        }
+        else
+        {
+            cout << "the sum is " << sumEvenRange(a, b) << endl;
+        }
+        return 0;
+}
