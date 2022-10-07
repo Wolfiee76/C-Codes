@@ -1,0 +1,17 @@
+//Write a definition of a function called foo, which takes a 
+//string parameter and returns the number of punctuation characters in it. 
+//Punctuation characters are: dot (.), comma (,), dash (-), question mark (?) and exclamation mark (!).
+
+int foo(string str)
+{
+    int count = 0;
+    string punct = "!?-.,";
+    for (char c : str)
+        if (punct.find(c) != -1)
+            count += 1;
+    return count;
+}
+int main()
+{
+    return 0;
+}
