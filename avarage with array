@@ -1,0 +1,15 @@
+// write a program to calculate and display the avarage of all number stored in an array of integers
+
+int main()
+{
+    int Runm[4]{ 5, 10, 15, 20 };
+    int sum=0
+
+        for (int i = 0; i < 4; i++)
+        {
+            sum += [i];
+        }
+    cout << " the avarage is: " << endl;
+    (float) sum / 4 << endl;
+    return 0;
+}
