@@ -1,0 +1,21 @@
+// write a function to count the number in an integer array having a value grater than 0
+// HINT u need to pass the array and its size as the function parameters
+
+int PositiveInt(const int items[], int size)
+{
+    int count = 0;
+    for (int i = 0; i < size; i++)
+    {
+        if (items[i] > 0)
+        {
+            count++;
+        }
+    }
+    return count;
+}
+
+int main()
+{
+    int numbers[4] = { 5, -5, 4, 10 };
+    cout << PositiveInt(numbers, 4) << endl;
+}
