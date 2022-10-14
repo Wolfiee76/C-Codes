@@ -1,0 +1,47 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+// wire a program to define a struct named person, which has the following field members
+// string - name the persons name
+// int age - persons age
+// initialize 3 variables of type person and assign some real values to their members
+// display on the screen the name of the person having the largest age
+
+struct person
+{
+    string name;
+    int age;
+};
+
+
+int main()
+{
+    person p1;
+    p1.name = "Joseph";
+    p1.age = 21;
+
+    person p2;
+    p2.name = "John";
+    p2.age = 20;
+
+    person p3;
+    p2.name = "Jacob";
+    p2.age = 27;
+
+    person oldest;
+    oldest = p1;
+
+    if (p2.age > oldest.age)
+    {
+        oldest = p2;
+    }
+
+    if (p3.age > oldest.age)
+    {
+        oldest = p3;
+    }
+
+    cout << "oldest person is " << oldest.name << " has age of " << oldest.age << endl;
+}
