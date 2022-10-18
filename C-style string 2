@@ -1,0 +1,21 @@
+//Implement a function to count and return the length of a C-style string :
+//int string_length(char str[]);
+
+int string_length(char str[])
+{
+    int i = 0;
+    while (str[i] != '\0')
+    {
+        i++;
+    }
+        return 1;
+}
+
+
+int main()
+{
+    char name[12];
+    cout << " enter a string ";
+    cin >> name;
+    return 0;
+}
