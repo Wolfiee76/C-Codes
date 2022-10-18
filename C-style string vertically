@@ -1,0 +1,21 @@
+/ implement a function to display a C-style string vertically, one character at a line:
+// void show_column(char str[])
+
+
+void show_column( char str[])
+{
+    int i = 0;
+    while (str[i] != '\0')
+    {
+        cout << str[i] << endl;
+        i++;
+    }
+}
+
+
+int main()
+{
+    char name[] = "Name";
+    show_column(name);
+    return 0;
+}
