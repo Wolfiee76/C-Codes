@@ -1,0 +1,14 @@
+// Create a function that takes string as an only parameter and 
+// prints only the uppercase letters.
+
+void ex2(string s)
+{
+    for (int i = 0; i < s.length(); i++)
+    {
+        if (isupper(s[i]))
+        {
+            cout << s[i];
+        }
+
+    }
+}
