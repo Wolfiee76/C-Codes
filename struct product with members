@@ -1,0 +1,28 @@
+/ Create a struct product with members: name, price, quantity.
+// Create a function that takes one - dimensional array of
+// products and calculates and returns the total price of all the
+// products(price * quantity for all of the products).
+
+struct product
+{
+	string name;
+	int quantity;
+	double price;
+
+};
+
+double getTotalPrices( product arr[],int size)
+{
+	double sum = 0;
+	for (int i = 0; i < size; i++)
+	{
+		sum += arr[i].price* arr[i].quantity;
+	}
+	return sum;
+}
+
+   
+int main()
+{  
+    return 0;
+}
