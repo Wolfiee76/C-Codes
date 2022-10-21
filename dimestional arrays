@@ -1,0 +1,32 @@
+// Create a function printArray(int a[], int size), 
+// which takes one - dimensional array and the size of the array as
+// parameters.The function should print all of the elements on
+// the console.
+
+//Create a 2 dimensional array and use the function from 
+// exercise 3a to print all elements in the array one row at a
+// time.
+
+void  printArray(int a[], int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        cout << a[i] << " ";
+    }
+}
+   
+int main()
+{
+    int table[3][5] =
+    {
+        {4, 5, 6 , 10, 4},
+        {1, 9, 0, 15, 2},
+        {3, 7, 2, -5, -3}
+    };
+    for (int row = 0; row < 3; row++)
+    {
+        printArray(table[row], 5);
+            cout << endl;
+    }
+    return 0;
+}
