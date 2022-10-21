@@ -1,0 +1,47 @@
+// Create a function that takes one dimensional array, start index, end
+// index and size as parameters and prints only the elements which
+// are between start index and end index.
+
+// FUNCTION: printPartial(int a[], int start, int end, int size)
+//Note: You should handle cases, where startand end indices are not
+//correct, but you assume that the arrayand the size are correct.
+//Handle cases where : start > end, start < 0, end > size by fixing those.
+
+void printPartial(int a[], int start, int end, int size)
+{
+    if (start < 0)
+    {
+        start = 0;
+    }
+
+    if (start > size -1)
+    {
+        start = size -1;
+    }
+
+    if (end < 0)
+    {
+        end = 0;
+    }
+
+    if (end > size - 1)
+    {
+        end = size - 1;
+    }
+
+    if (end < start)
+    {
+        end = start;
+    }
+
+    for (int i = start; i <= end; i++)
+    {
+        cout << a[i] << " ";
+    }
+}
+
+   
+int main()
+{  
+    return 0;
+}
