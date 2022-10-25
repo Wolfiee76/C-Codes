@@ -1,0 +1,21 @@
+
+//Write a function called foo, which accepts a string as a parameter, 
+//replaces all upper-case letters in it with the corresponding 
+//lower-case letters and then displays the resulting string on the screen.
+
+
+void foo(string str)
+{
+    for (size_t i = 0; i < str.size(); ++i)
+    {
+        str[i] = tolower(str[i]);
+    }
+    cout << str;
+}
+
+
+
+int main()
+{
+    foo("WOLF");
+}
