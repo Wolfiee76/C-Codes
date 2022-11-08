@@ -1,0 +1,20 @@
+// write the definiton of the change func below which will be used to swap the values of two integer variables, given two pointers
+// void change (int* a, int* b)
+
+void change(int* a, int* b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+
+}
+
+int main()
+{  
+    int x = 69, y = 420;
+    cout << x << " " << y << endl;
+
+    change(&x, &y);
+    cout << x << " " << y << endl;
+    return 0;
+}
