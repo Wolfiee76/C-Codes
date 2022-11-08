@@ -1,0 +1,20 @@
+// write the definiton of fillArray func below which will be used to fill in the array with values from 1...
+
+void fillArray(int a[], int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        a[i] = i + 1;
+    }
+}
+
+int main()
+{  
+    int n;
+    cout << " how many numbers:  ";
+    cin >> n;
+
+    int* arr = new int[n];
+    fillArray(arr, n);
+    return 0;
+}
