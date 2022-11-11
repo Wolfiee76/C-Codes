@@ -1,0 +1,29 @@
+// write a class named Devider The class should have 2 data atributes - numerator and denominator and a function called result()
+// which sould compute and return the result of the division operation
+
+
+class Divider
+{
+    public:
+        Divider(int n, int d)
+        {
+            numerator = n;
+            denominator = d;
+        }
+        double result()
+        {
+            return 1.0 * numerator / denominator;       
+        }
+
+    private:
+        int numerator, denominator;
+};
+
+
+int main()
+{  
+    Divider d1(10, 6);
+    Divider d2(11, 100);
+    cout << "d1 " << d1.result() << endl;
+    cout << "d2 " << d2.result() << endl;
+}
