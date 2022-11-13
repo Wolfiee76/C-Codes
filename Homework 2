@@ -1,0 +1,37 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+
+
+int main()
+{
+    ifstream myfile;
+    myfile.open("Countries.txt");
+    if (myfile.is_open())
+    {
+        pair<string, int> temp;
+        myfile >> temp.first >> temp.second;
+        pair<string, int> smallest = temp;
+        pair<string, int> Largest = temp;
+        while (myfile >> temp.first >> temp.second)
+        {
+            if (temp.second < smallest.second)
+            {
+                smallest = temp;
+            }
+            if (temp.second > Largest.second)
+            {
+                Largest = temp;
+            }
+            
+        }
+        cout << "Smallest: " << smallest.first << " (" << smallest.second << ")" << "\nLargest: " << Largest.first << " (" << Largest.second << ")";
+
+    }
+    else
+    {
+        cout << "Failed to find the file.\n";
+    }
+}
