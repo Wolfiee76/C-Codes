@@ -1,0 +1,39 @@
+#include <iostream>
+#include <string>
+using namespace std;
+// create a class named LONGSTRING that has a member for string a single string - value. Include members length (that returns the
+// length of the string) and get(int p) that returns the char at position p. Also add method void addString(const LongString& s)
+// that adds the string from s to the current string.
+
+class LongString
+{
+public:
+    LongString(string v) :value(v){}
+
+    int length() { return value.size(); }
+    char get(int p)
+    {
+        return value[p];
+    }
+
+    void addString(const LongString& s)
+    {
+        value += s.value;
+    }
+
+private:
+    string value;
+};
+
+int main()
+{
+    LongString str("initial");
+    LongString suffix("suffix value");
+    str.addString(suffix);
+    for (int i = 0; i < str.length(); i++)
+    {
+        cout << str.get(i);
+    }
+    cout << endl;
+    
+}
