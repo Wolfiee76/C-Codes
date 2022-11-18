@@ -1,0 +1,54 @@
+#include <iostream>
+#include <string>
+using namespace std;
+// create a class named STUDENT that has members for storing name, quizzes and exams. add getfinal() func to calc and return the 
+//final grade of the stud where quizes are 40% and exams are 60%
+class Student
+{
+public:
+    Student(){}
+    Student(string n, double e, double d)
+    {
+        name = n;
+        quizzes = e;
+        exams = d;
+    }
+
+    double GetFinal()
+    {
+        return quizzes * 0.4 + exams * .06;
+    }
+    void setName(string n) { name = n; }
+    string getName() { return name; }
+
+private:
+    string name;
+    double quizzes;
+    double exams;
+};
+
+int main()
+{
+    Student students[5];
+
+    Student s1("Gohsho ", 80, 60);
+    students[0] = s1;
+
+    Student s2("Pe6o ", 30, 10);
+    students[1] = s2;
+
+    Student s3("Gohsho ", 20, 80);
+    students[2] = s3;
+
+    Student s4("Gohsho ", 10, 50);
+    students[3] = s4;
+
+    Student s5("Gohsho ", 90, 60);
+    students[4] = s5;
+
+    for (int i = 0; i < 5; i++)
+    {
+        cout << students[i].getName() <<
+            "" << students[i].GetFinal() << endl;
+    }
+}
