@@ -1,0 +1,35 @@
+class Triangle
+{
+public:
+    string getType()
+    {
+        if (isValid())
+        {
+            if (a == b && b == c)
+            {
+                return "equil";
+            }
+            else if (a == b || b == c || a == c)
+            {
+                return "isco"
+            }
+        }
+        else {
+            return "invalid";
+        }
+   }
+private:
+    bool isValid()
+    {
+        return a + b > c && a + c > b && b + c > a;
+    }
+    int a;
+    int b; 
+    int c;
+    
+};
+
+int main()
+{
+   
+}
