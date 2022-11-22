@@ -18,8 +18,8 @@ T minimum(T arr[], int size[])
 int main()
 {
     int arr1[] = { 1,2,3,4,5 };
-    char arr2[] = { "a", "A"};
-    string arr3[] = { "bye", "nope"};
+    char arr2[] = { 'a', 'b', 'f', 'g', 'F'};
+    string arr3[] = { "bye", "nope", "yes",  "no", "mhm" };
     cout << minimum(arr1, 5) << endl;
     cout << minimum(arr2, 5) << endl;
     cout << minimum(arr3, 5) << endl;
