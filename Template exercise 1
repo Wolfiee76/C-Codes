@@ -1,0 +1,26 @@
+// write a func that returns the min element in array. It shoud recieve the array as one parameter and the array size as another
+// paramenter. The func should be able to work ro arbitary data types.
+template<class T>
+T minimum(T arr[], int size[])
+{
+    T min = arr[0];
+    for (int i = 1; i < size; i++)
+    {
+        if (arr[i] < min)
+        {
+            min = arr[i];
+        }
+      
+    }
+    return min;
+}
+
+int main()
+{
+    int arr1[] = { 1,2,3,4,5 };
+    char arr2[] = { "a", "A"};
+    string arr3[] = { "bye", "nope"};
+    cout << minimum(arr1, 5) << endl;
+    cout << minimum(arr2, 5) << endl;
+    cout << minimum(arr3, 5) << endl;
+}
