@@ -1,0 +1,39 @@
+// Write a template class for that user-defined type that receives 
+//the values for the two variables on the constructor and
+//implements two accessor methods for getting the value of the
+//firstand second variables, by reference.
+template<class T, class T2>
+class Tuple
+{
+	T a;
+	T2 b;
+
+public:
+	Tuple(T _a, T2 _b)
+	{
+		a = _a;
+		b = _b;
+	}
+	void getA(T& _a)
+	{
+		_a = a;
+	}
+
+	void getB(T2& _b)
+	{
+		_b = b;
+	}
+
+};
+
+int main()
+{
+	Tuple<int, char> t(5, 'c');
+	int aaa;
+	t.getA(aaa);
+
+	char bbb;
+	t.getB(bbb);
+
+	cout << aaa << " - " << bbb << endl;
+}
