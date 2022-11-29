@@ -1,0 +1,52 @@
+class Vehicle
+{
+public:
+   Vehicle() {}
+   Vehicle(int v, double p, string c) : enginevol(v), price(p), color(c) {}
+   int getVolume() { return enginevol; }
+   void setVolume(int v) { enginevol = v; }
+   double getPrice() { return price; }
+   void setPrice(double p) { price = p; }
+   string getColor() { return color; }
+   void setColor(string c) { color = c; }
+
+private:
+
+	int enginevol;
+	double price;
+	string color;
+};
+
+class Car : public Vehicle {
+public:
+	Car() {}
+	Car(int v, double p, string c, string m) : Vehicle(v,p,c), model(m) {}
+	string getModel() { return model; }
+	void setModel(string m) { model = m; }
+
+private:
+	string model;
+};
+
+class Bus : public Vehicle {
+public:
+	Bus() {}
+	Bus(int v, double p, string c, int s)
+	{
+		setVolume(v);
+		setPrice(p);
+		setColor(c);
+		seats = s;
+	}
+	int getSeats() { return seats; }
+	void setSeats(int s) { seats = s; }
+
+private:
+	int seats;
+};
+
+int main()
+{
+	Car c(2400, 9000, "Red", "Ferrari");
+   cout << c.getColor() << "" << c.getModel() << "it is worth" << 
+}
