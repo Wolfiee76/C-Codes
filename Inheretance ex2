@@ -1,0 +1,53 @@
+//implement a base class Person and 2 classes deriving from it (Student and Instructor)
+
+class Person
+{
+public:
+	Person(string n, string a) : name(n), adress(a) {}
+	void display()
+	{
+		cout << "name" << name << endl;
+		cout << "Adress" << adress << endl;
+	}
+private:
+	string name;
+	string adress;
+
+};
+
+class Student : public Person
+{
+public:
+	Student(string n, string a, string m) :Person(n,a), major(m) {}
+	void display()
+	{
+		Person::display();
+			cout << "Major" << major << endl;
+			
+	}
+private:
+	string major;
+};
+
+class Instructor : public Person
+{
+public:
+	Instructor(string n, string a, double s) {}
+	void display()
+	{
+		Person::display();
+		cout << "salary" << salary << endl;
+	}
+
+
+
+private:
+
+	double salary;
+};
+
+
+int main()
+{
+	Student s("go6o", "bg" "gg");
+}
