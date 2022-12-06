@@ -1,0 +1,63 @@
+//create base class Fruit which has data members color and taste. Provide getters and setters for the data members. 
+// Add one more method display that displays all the data.
+
+class Fruit
+{
+public:
+	Fruit(string c, string t) : color(c), taste(t) {}
+	string getColorl() { return color; }
+	void setColor(string c) { color =c; }
+	string getTaste() { return taste; }
+	void setTaste(string t) { color = t; }
+
+	virtual void display()
+	{
+	   cout << " color " << color << " taste " << taste << endl;
+	}
+	
+private:
+	string color;
+	string taste;
+};
+
+class Apple : public Fruit
+{
+public:
+	Apple(string c, string t) : Fruit(c,t) {}
+
+	void display()
+	{
+		cout << " Apple " << endl;
+		Fruit::display();
+	}
+
+private:
+	
+};
+
+class Grapefruit : public Fruit
+{
+public:
+	Grapefruit(string c, string t) : Fruit(c, t) {}
+
+	void display()
+	{
+		cout << " Grapefruit " << endl;
+		Fruit::display();
+	}
+
+private:
+
+};
+
+int main()
+{
+	Apple a(" red ", " sweet ");
+	Apple g(" yellow ", " sour ");
+
+	a.display();
+	cout << endl;
+
+	g.display();
+	cout << endl;
+}
