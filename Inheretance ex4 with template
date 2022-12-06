@@ -1,0 +1,104 @@
+// Implement a template func that prints the min item in a vector of pointers having the following
+// template<class T>,,, void printMinimum(const vector<T*>& items)
+
+template<class T>
+void printMinimum(const vector<T*>& items)
+{
+	T min = items[0];
+	for (int i = 1; i < items.size(); i++)
+	{
+		if (*(itmes[i]) < *min)
+		{
+			min = *(items[i]);
+		}
+	}
+	cout << "Minimum product is - " << min << endl;
+}
+
+
+
+class Product
+{
+public:
+	Product(string n, double p)
+	{
+		name = n;
+		price = p;
+	}
+	
+	virtual double GetTotalPrice() const {}
+	friend ostream& operator<<(ostream& out, const Product& value);
+	bool operator<(const Product& rhs)
+	{
+
+	}
+
+  protected:
+	string name;
+	double price;
+};
+
+ostream& operator<<(ostream & out, Product & value)
+{
+	out << value.name << " -$ " << value.GetTotalPrice();
+	return out;
+}
+
+class PhysicalProduct : public Product
+{
+public:
+	PhysicalProduct(string n, double p, double sC) : Product(n,p)
+	{
+		shippingcost = sC;
+	}
+
+    double GetTotalPrice()
+	{
+		return price + shippingcost;
+	}
+	
+
+private:
+	double shippingcost;
+};
+
+class DigitalProduct : public Product
+{
+public:
+
+	DigitalProduct(string n, double p, double d) : Product(n, p), discount(d)
+	{
+
+	}
+	
+
+	double GetTotalPrice()
+	{
+		return price - discount;
+	}
+
+private:
+	double discount;
+};
+
+
+
+
+
+int main()
+{
+	vector <Product*> products;
+	products.push_back(new PhysicalProduct("Apples", 2.99, 10));
+	products.push_back(new PhysicalProduct("Pear", 5.99, 12));
+	products.push_back(new PhysicalProduct("Melon", 7.99, 20));
+
+	products.push_back(new DigitalProduct("DragonFruit", 2.99, 10));
+	products.push_back(new DigitalProduct("Pinapple", 5.99, 12));
+	products.push_back(new DigitalProduct("Banana", 2.99, 10));
+
+	for (int i = 0; i < products.size(); i++)
+	{
+		cout << *(products[i]) << endl;
+	}
+	
+}
