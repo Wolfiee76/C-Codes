@@ -1,0 +1,62 @@
+// TASK REQUIREMENTS!
+// Write a program to read a list of products and their base prices from a TXT file, calculate the total price 
+//for each productand display the one with the maximum total price on the screen.The file can contain
+//the product information as separate lines of the form :
+//Coca-cola   2.80
+//Pepsi   3.15
+//Hot - dog    13.99
+//The total price of a product equals the base price plus a tax, where the tax is 25 % of the price and
+//cannot exceed $3.
+//All of the calculations should be performed by a class named Product, which should store a product’s
+//base priceand tax percentage, and implement a GetTotalPrice() method to calculateand return
+//the total price.
+
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+class Product
+{
+  public:
+      string name;
+      double basePrice = 0;
+    double GetTotalPrice()
+    {
+        return basePrice + min(basePrice * tax, 3.0); // returns the max price
+    }
+
+  private:
+      double tax = 0.25;
+    
+};
+
+
+int main()
+{
+    ifstream myfile;
+    myfile.open("Products.txt"); // opens the txt file
+    string myline;
+    if (myfile.is_open()) {
+        Product product;
+        Product highest;
+        pair<string, int> Product; // we pair the string and the int from the txt file
+        myfile >> product.name >> product.basePrice;
+        while (myfile >> product.name >> product.basePrice)
+        {
+            if (product.GetTotalPrice() < highest.GetTotalPrice())
+            {
+                highest = product;
+            }
+            
+        }
+        cout << " Highest: " << product.name << " (" << product.basePrice << ")"; // prints the product with the highest price
+    }
+    else {
+       cout << "Couldn't open file\n";
+    }
+    return 0;
+}
+
+
+
